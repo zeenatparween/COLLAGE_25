@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cube Calculator</title>
+</head>
+<body>
+    <h2>Cube of a Number</h2>
+    
+    <label for="numberInput">Enter a number:</label>
+    <input type="number" id="numberInput" />
+    <button onclick="calculateCube()">Get Cube</button>
+    
+    <p id="result"></p>
+
+    <script>
+        function getCube(number) {
+            return number * number * number;
+        }
+        function calculateCube() {
+            let num = document.getElementById("numberInput").value;
+            let cube = getCube(num);
+            document.getElementById("result").innerText = "Cube of " + num + " is " + cube;
+        }
+    </script>
+</body>
+</html>

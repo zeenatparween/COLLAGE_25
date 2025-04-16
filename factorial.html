@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1>Factorial of Number</h1>
+    <label for="factinput">Input for factorial Output</label>
+    <input type="number" id="factinput" />
+    <button onclick="calculate()">Click Me</button>
+    <p id="otput"></p>
+    <script>
+        function factorial(num) {
+            let fact = 1;
+            for (let i = 1; i <= num; i++) {
+                fact = fact * i;
+            }
+            return fact;
+        }
+        function calculate() {
+            let num = document.getElementById("factinput").value;
+            let fact = factorial(parseInt(num));
+            document.getElementById("otput").innerText = "Factorial of " + num + " is " + fact;
+        }
+    </script>
+</body>
+
+</html>
