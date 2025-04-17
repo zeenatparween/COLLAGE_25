@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Event Listners</h2>
+     <!-- onblur -->
+    <input type="text" id="blurInput" placeholder="onblur">
+      <!-- onchange -->
+    <select  id="Onchange">
+        <option value="one">select</option>
+        <option value="Two">one</option>
+        <option value="three">Two</option>
+        <option value="four">Three</option>
+    </select>
+
+    <!-- onclick -->
+     <button id="clickbtn">Click Me</button>
+     <!-- onfocus -->
+      <input type ="text" id="focusInput" placeholder="onfocus">
+
+      <!-- onkeypress -->
+       <input type="text" id="keypressInput" placeholder="onkeypress">
+       <h3 id="key"></h3>
+
+       <!-- form submit -->
+        <form id="form">
+            <input type="text"  name="name" required>
+            <button type="submit">Submit</button>
+        </form><br>
+
+        <!-- onmouseover -->
+         <div id="hoberbox" class="box">Hover over me</div>
+        <!-- onload -->
+         <div id="dblclick" class="box">Double-clicke me</div>
+
+
+        <script>
+            // onblur
+            document.getElementById("blurInput").addEventListener("blur", function(){
+                alert("Blur event triggered");
+            });
+            // onchange
+            document.getElementById("Onchange").addEventListener("change", function(){
+                alert("You selected" + this.value);
+            });
+            //onclick
+            document.getElementById("clickbtn").addEventListener("click", function(){
+                alert("Button clicked")
+
+            });
+
+            // onfocus
+            document.getElementById("focusInput").addEventListener("focus", function(){
+                this.style.backgroundColor = "lightblue";
+            });
+       
+            // onkeypress
+            let val = document.getElementById("key");
+        document.getElementById("keypressInput").addEventListener("keypress", function(e){
+            alert("Keypress Event occurred");
+            val.innerText = "Your key: " + e.key;
+        });
+            // form Submit
+            document.getElementById("form").addEventListener("submit", function(e){
+                e.preventDefault();
+                alert("Form submitted");
+            });
+          // mouseOver
+          document.getElementById("hoberbox").addEventListener("mouseover", function(){
+            this.style.backgroundColor = "#f0f0f0";
+          });
+
+          document.getElementById("dblclick").addEventListener("dblclick", function(){
+            alert("Double clicked");
+          })
+        </script>
+</body>
+
+</html>
