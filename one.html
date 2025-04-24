@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Cube Calculator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#fff;
+        }
+    </style>
 </head>
-<body>
-    <h2>Cube of a Number</h2>
-    
-    <label for="numberInput">Enter a number:</label>
-    <input type="number" id="numberInput" />
-    <button onclick="calculateCube()">Get Cube</button>
-    
-    <p id="result"></p>
+<body class="bg-black">
+    <div>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <h1>Lorem ipsum dolor sit amet</h1>
+        <p>Lorem ipsum dolor sit amet</p>
+        <input type="password" id="">
 
-    <script>
-        function getCube(number) {
-            return number * number * number;
-        }
-        function calculateCube() {
-            let num = document.getElementById("numberInput").value;
-            let cube = getCube(num);
-            document.getElementById("result").innerText = "Cube of " + num + " is " + cube;
-        }
-    </script>
+      <ul>
+        <li class="list-item">one</li>
+        <li class="list-item">Two</li>
+        <li class="list-item">Three</li>
+        <li class="list-item">four</li>
+      </ul>
+    </div>
+    
 </body>
 </html>
