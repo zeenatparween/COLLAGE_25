@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time and Date</title>
+</head>
+<body>
+    <div>
+        <h1>Time and date </h1>
+        <label for="text">Date:
+            <input id="dt" type="date" placeholder="Enter date">
+        </label>
+        <label for="time">Time:
+            <input id="tm" type="time" placeholder="Enter time">
+        </label>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="hr"></p>
+        <p id="mnt"></p>
+        <p id="sec"></p>
+        <p id="loc"></p>
+
+        <button id="sb" onclick=details()>Click Time details</button>
+    </div>
+</body>
+<script>
+  function details(){
+let d = document.getElementById("dt").value;
+let para1 = document.getElementById("p1").innerText = d;
+let t = document.getElementById("tm").value;
+let para2 = document.getElementById("p2").innerText = t;
+let h = t.getHours();
+let m =t.getMinutes();
+let s =t.getSeconds();
+let hr = document.getElementById("hr").innerText = h;
+let mnt = document.getElementById("mnt").innerText = m;
+let sec = document.getElementById("sec").innerText = s;
+}
+
+
+</script>
+</html>
